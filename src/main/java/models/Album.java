@@ -1,18 +1,17 @@
 import java.util.ArrayList;
 
 public class Album {
+	private Long id;
 	private String title;
 	private Artist artist;
 	private int year;
 	private ArrayList<String> genres;
 	//private ImageIcon coverArt;
 	
-	public Album(){
-		this.title = " ";
-		this.artist = null;
-		this.year = 0;	
-		this.genres = null;
-	}
+	/**
+	 * Default constructor, necessary for Hibernate
+	 */
+	public Album(){}
 	
 	public Album(String title, Artist artist, int year,ArrayList<String> genres){
 		this.title = title;
@@ -35,6 +34,10 @@ public class Album {
 	
 	public ArrayList<String> getGenres(){
 		return this.genres;
+	}
+	
+	public Long getId() {
+		return this.id;
 	}
 	
 	public void setTitle(String newTitle){

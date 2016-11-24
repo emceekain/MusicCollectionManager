@@ -1,14 +1,20 @@
 import java.util.ArrayList;
 
 public class Artist {
+	public Long id;
 	public String name;
 	public ArrayList<Album> albums;
 	
-	public Artist(){
-		this.name = " ";
-		this.albums = null;
-	}
+	/**
+	 * Default constructor, necessary for Hibernate.
+	 */
+	public Artist(){}
 	
+	public Long getId() {
+		return this.id;
+	}
+
+
 	public Artist(String name,ArrayList<Album> albums){
 		this.name = name;
 		this.albums = albums;
