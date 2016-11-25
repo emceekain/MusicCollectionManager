@@ -1,5 +1,4 @@
 package main.java.DAOs;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -27,7 +26,6 @@ public class AlbumDAO {
         if(null == album){
             throw new DAOException("Album update failed; album is null");
         }
-        
         try {
         	Session session = sessionFactory.getCurrentSession();
         	session.update(album);
@@ -72,6 +70,5 @@ public class AlbumDAO {
     	
     }
     
-    
-
 }
+
